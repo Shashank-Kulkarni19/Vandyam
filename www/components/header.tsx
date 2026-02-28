@@ -1,4 +1,5 @@
 "use client";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -8,12 +9,10 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
-import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 const navigationItems = [
@@ -46,7 +45,7 @@ const navigationItems = [
 
 export function Header() {
   return (
-    <header className="w-full px-4 py-4 md:px-8 sticky top-0 z-50 transition-all duration-300 shadow-md border-b bg-black border-white/10">
+    <header className="w-full px-4 py-4 md:px-8 sticky top-0 z-50 shadow-md border-b bg-black border-white/10">
       <div className="flex items-center justify-between w-full">
 
         {/* Logo */}
@@ -57,7 +56,7 @@ export function Header() {
             width={200}
             height={70}
             priority
-            className="h-10 md:h-12 w-auto object-contain transition-all duration-300"
+            className="h-10 md:h-12 w-auto object-contain"
           />
         </Link>
 
@@ -68,17 +67,18 @@ export function Header() {
               <NavigationMenuItem key={item.name}>
                 {item.subItems ? (
                   <>
-                    <Link href={item.href} passHref legacyBehavior>
-                      <NavigationMenuTrigger
-                        className={cn(
-                          "bg-transparent transition-all duration-300 rounded-full px-5 font-semibold text-white hover:text-white hover:bg-white/10 cursor-pointer text-base"
-                        )}
-                      >
-                        {item.name}
-                      </NavigationMenuTrigger>
-                    </Link>
+                    {/* Trigger */}
+                    <NavigationMenuTrigger
+                      className={cn(
+                        "bg-transparent transition-all duration-300 rounded-full px-5 font-semibold text-white hover:bg-white/10 text-base"
+                      )}
+                    >
+                      {item.name}
+                    </NavigationMenuTrigger>
+
+                    {/* Dropdown Content */}
                     <NavigationMenuContent>
-                      <ul className="grid w-[400px] gap-4 p-6 md:w-[600px] md:grid-cols-2 bg-white rounded-3xl shadow-2xl border border-gray-100 relative">
+                      <ul className="grid w-[400px] gap-4 p-6 md:w-[600px] md:grid-cols-2 bg-white rounded-3xl shadow-2xl border border-gray-100">
                         {item.subItems.map((subItem) => (
                           <li key={subItem.name}>
                             <NavigationMenuLink asChild>
@@ -86,8 +86,12 @@ export function Header() {
                                 href={subItem.href}
                                 className="block rounded-2xl p-4 transition-all duration-300 hover:bg-blue-50 group/item"
                               >
-                                <div className="font-bold text-gray-900 group-hover/item:text-blue-700">{subItem.name}</div>
-                                <div className="text-sm text-gray-500 mt-1 line-clamp-1">Explore our {subItem.name} solutions</div>
+                                <div className="font-bold text-gray-900 group-hover/item:text-blue-700">
+                                  {subItem.name}
+                                </div>
+                                <div className="text-sm text-gray-500 mt-1 line-clamp-1">
+                                  Explore our {subItem.name} solutions
+                                </div>
                               </Link>
                             </NavigationMenuLink>
                           </li>
@@ -99,9 +103,7 @@ export function Header() {
                   <NavigationMenuLink asChild>
                     <Link
                       href={item.href}
-                      className={cn(
-                        "transition-all duration-300 font-semibold px-5 py-2 rounded-full text-white hover:text-white hover:bg-white/10 text-base block"
-                      )}
+                      className="transition-all duration-300 font-semibold px-5 py-2 rounded-full text-white hover:bg-white/10 text-base block"
                     >
                       {item.name}
                     </Link>
@@ -130,6 +132,7 @@ export function Header() {
               <Menu className="h-6 w-6" />
             </Button>
           </SheetTrigger>
+
           <SheetContent side="right" className="w-[300px] bg-black border-l border-white/10">
             <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
             <div className="flex flex-col space-y-4 mt-8">
@@ -141,6 +144,7 @@ export function Header() {
                   >
                     {item.name}
                   </Link>
+
                   {item.subItems && (
                     <div className="ml-4 space-y-2">
                       {item.subItems.map((subItem) => (
@@ -156,6 +160,7 @@ export function Header() {
                   )}
                 </div>
               ))}
+
               <Button asChild className="bg-blue-600 hover:bg-blue-700 text-white rounded-full mt-4">
                 <Link href="/contact">Contact Us</Link>
               </Button>
