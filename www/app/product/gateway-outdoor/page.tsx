@@ -55,17 +55,17 @@ export default function GatewayOutdoorPage() {
     ]
 
     return (
-        <div className="min-h-screen bg-white font-sans selection:bg-teal-100 italic-none">
+        <div className="min-h-screen bg-white font-sans selection:bg-blue-100 italic-none">
             <Header />
             {/* 1) HERO SECTION */}
-            <section className="relative pt-24 pb-32 overflow-hidden bg-gradient-to-br from-teal-50 via-white to-blue-50">
+            <section className="relative pt-24 pb-32 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50">
                 <div className="container mx-auto px-6 relative z-10">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-3/5 space-y-8 animate-in fade-in slide-in-from-left duration-1000">
                             <div className="space-y-2">
-                                <h2 className="text-teal-600 font-bold uppercase tracking-[0.2em] text-sm">Product Reveal</h2>
+                                <h2 className="text-blue-600 font-bold uppercase tracking-[0.2em] text-lg">Product Reveal</h2>
                                 <h1 className="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
-                                    VIoT <span className="text-teal-600">LoRaWAN</span> Gateway
+                                    VIoT <span className="text-blue-600">LoRaWAN</span> Gateway
                                 </h1>
                                 <p className="text-3xl font-medium text-slate-500">Outdoor Gateway</p>
                             </div>
@@ -82,8 +82,8 @@ export default function GatewayOutdoorPage() {
                                     { label: "Battery Backup", icon: Battery },
                                     { label: "Cellular + Ethernet", icon: Signal }
                                 ].map((badge, i) => (
-                                    <div key={i} className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-teal-100 px-4 py-2 rounded-full shadow-sm text-slate-700 font-semibold text-sm">
-                                        <badge.icon className="w-4 h-4 text-teal-600" />
+                                    <div key={i} className="flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-blue-100 px-4 py-2 rounded-full shadow-sm text-slate-700 font-semibold text-sm">
+                                        <badge.icon className="w-4 h-4 text-blue-600" />
                                         {badge.label}
                                     </div>
                                 ))}
@@ -92,7 +92,7 @@ export default function GatewayOutdoorPage() {
 
                         <div className="lg:w-2/5 flex justify-center animate-in fade-in slide-in-from-right duration-1000">
                             <div className="relative group">
-                                <div className="absolute inset-0 bg-teal-200 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity" />
+                                <div className="absolute inset-0 bg-blue-200 rounded-full blur-3xl opacity-20 group-hover:opacity-40 transition-opacity" />
                                 <Image
                                     src="/New folder/Gateway Outdoor.png"
                                     alt="VIoT Outdoor Gateway"
@@ -112,7 +112,7 @@ export default function GatewayOutdoorPage() {
                 <div className="container mx-auto px-6">
                     <div className="max-w-4xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">
-                            Key Product <span className="text-teal-600">Differentiators</span>
+                            Key Product <span className="text-blue-600">Differentiators</span>
                         </h2>
 
                         <div className="grid md:grid-cols-2 gap-x-12 gap-y-6">
@@ -125,8 +125,8 @@ export default function GatewayOutdoorPage() {
                                 "Multi-function LED operational status",
                                 "Fully integrated with LoRa network servers and sensors"
                             ].map((item, i) => (
-                                <div key={i} className="flex items-start gap-4 p-4 rounded-2xl hover:bg-teal-50/50 transition-colors group">
-                                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-teal-100 text-teal-600 flex items-center justify-center group-hover:bg-teal-600 group-hover:text-white transition-all">
+                                <div key={i} className="flex items-start gap-4 p-4 rounded-2xl hover:bg-blue-50/50 transition-colors group">
+                                    <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-all">
                                         <CheckCircle2 size={16} />
                                     </div>
                                     <p className="text-slate-700 font-medium leading-relaxed">{item}</p>
@@ -142,7 +142,7 @@ export default function GatewayOutdoorPage() {
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col lg:flex-row items-center gap-16">
                         <div className="lg:w-1/2 order-2 lg:order-1">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-8 border-l-4 border-teal-600 pl-6">Core Capability</h2>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-8 border-l-4 border-blue-600 pl-6">Core Capability</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {[
                                     "IN865 / EU868 / RU864", "Time Duplex 8 Rx / 1 Tx",
@@ -152,7 +152,7 @@ export default function GatewayOutdoorPage() {
                                     "Flexible Connectivity"
                                 ].map((feature, i) => (
                                     <div key={i} className="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
-                                        <div className="w-2 h-2 rounded-full bg-teal-500" />
+                                        <div className="w-2 h-2 rounded-full bg-blue-500" />
                                         <span className="text-slate-700 font-semibold text-sm">{feature}</span>
                                     </div>
                                 ))}
@@ -180,13 +180,13 @@ export default function GatewayOutdoorPage() {
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900">
                             Technical & Functional Specifications
                         </h2>
-                        <div className="w-24 h-1 bg-teal-500 mx-auto mt-6 rounded-full" />
+                        <div className="w-24 h-1 bg-blue-500 mx-auto mt-6 rounded-full" />
                     </div>
 
                     <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
                         {specs.map((spec, i) => (
-                            <div key={i} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg hover:shadow-teal-100 transition-all group">
-                                <div className="w-14 h-14 bg-teal-50 text-teal-600 rounded-2xl flex items-center justify-center mb-6 border border-teal-100 group-hover:scale-110 transition-transform">
+                            <div key={i} className="bg-white rounded-3xl p-8 border border-slate-100 shadow-lg hover:shadow-blue-100 transition-all group">
+                                <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 border border-blue-100 group-hover:scale-110 transition-transform">
                                     <spec.icon size={28} />
                                 </div>
                                 <h3 className="text-xl font-bold text-slate-900 mb-6">{spec.title}</h3>
@@ -244,11 +244,11 @@ export default function GatewayOutdoorPage() {
             </section>
 
             {/* 6) ENTERPRISE BENEFITS SECTION */}
-            <section className="py-24 bg-teal-50 text-slate-900 relative">
+            <section className="py-24 bg-blue-50 text-slate-900 relative">
                 <div className="absolute inset-0 opacity-10 pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]" />
                 <div className="container mx-auto px-6 text-center relative z-10">
                     <h2 className="text-3xl md:text-4xl font-bold mb-16">
-                        Built for <span className="text-teal-600">Enterprise</span> IoT Deployments
+                        Built for <span className="text-blue-600">Enterprise</span> IoT Deployments
                     </h2>
 
                     <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -257,9 +257,9 @@ export default function GatewayOutdoorPage() {
                             "Secure LoRaWAN Integration", "Low Power Consumption",
                             "Scalable Network Expansion"
                         ].map((point, i) => (
-                            <div key={i} className="p-8 rounded-[2rem] bg-white border border-teal-100 hover:border-teal-500 hover:shadow-xl hover:shadow-teal-200/50 transition-all group">
-                                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-teal-600 transition-colors">
-                                    <CheckCircle2 size={24} className="text-teal-600 group-hover:text-white transition-colors" />
+                            <div key={i} className="p-8 rounded-[2rem] bg-white border border-blue-100 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-200/50 transition-all group">
+                                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto group-hover:bg-blue-600 transition-colors">
+                                    <CheckCircle2 size={24} className="text-blue-600 group-hover:text-white transition-colors" />
                                 </div>
                                 <h4 className="font-bold text-lg leading-snug text-slate-800">{point}</h4>
                             </div>

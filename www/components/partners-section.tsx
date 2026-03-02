@@ -47,12 +47,12 @@ export function PartnersSection() {
       name: "HyperLight",
       image: "/home/partner/HyperLight.jpg",
       url: "https://www.hyperlight.systems/" // Replace with actual partner website URL
-    },{
+    }, {
       id: 8,
       name: "Akxa",
       image: "/home/partner/akxa.png",
       url: "https://akxatech.com/" // Replace with actual partner website URL
-    },{
+    }, {
       id: 9,
       name: "Indic",
       image: "/home/partner/indic.png",
@@ -81,28 +81,29 @@ export function PartnersSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Our Trusted Partners</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            We collaborate with industry leaders and innovative organizations to deliver cutting-edge 
+            We collaborate with industry leaders and innovative organizations to deliver cutting-edge
             monitoring and surveillance solutions worldwide.
           </p>
         </div>
 
         {/* Partners Container with Navigation */}
-        <div className="relative max-w-6xl mx-auto overflow-hidden">
+        <div
+          className="relative max-w-[1600px] mx-auto overflow-hidden"
+          style={{
+            ["--scroll-duration" as string]: `${partners.length * 3}s`,
+            ["--scroll-distance" as string]: `-${partners.length * (192 + 32)}px`
+          }}
+        >
           {/* Partners Grid */}
-          <div 
-            className="flex space-x-8 animate-scroll"
-            style={{
-              animation: 'scroll 20s linear infinite'
-            }}
-          >
+          <div className="flex space-x-8 animate-infinite-scroll w-max">
             {duplicatedPartners.map((partner, index) => (
               <div
                 key={`${partner.id}-${index}`}
                 className="group transition-all duration-500 ease-in-out transform hover:scale-105 flex-shrink-0"
               >
-                <a 
-                  href={partner.url} 
-                  target="_blank" 
+                <a
+                  href={partner.url}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="block cursor-pointer"
                   aria-label={`Visit ${partner.name}'s website`}
@@ -126,16 +127,6 @@ export function PartnersSection() {
           </div>
         </div>
 
-        <style>{`
-          @keyframes scroll {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-${280 * partners.length}px);
-            }
-          }
-        `}</style>
 
         {/* Partnership CTA */}
         <div className="text-center mt-16">

@@ -20,7 +20,7 @@ export default function ContactPage() {
   const [showSuccess, setShowSuccess] = useState(false)
   const [loading, setLoading] = useState(false)
   const formRef = useRef<HTMLFormElement>(null)
-  
+
   // Initialize EmailJS
   useEffect(() => {
     // Check if we're in the browser and initialize EmailJS
@@ -41,7 +41,7 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    
+
     // Validate required fields
     if (!formData.firstName.trim() || !formData.lastName.trim() || !formData.email.trim() || !formData.message.trim()) {
       alert('Please fill in all required fields.')
@@ -50,12 +50,12 @@ export default function ContactPage() {
 
     try {
       setLoading(true)
-      
+
       // Log environment variables for debugging
       console.log('Service ID:', process.env.NEXT_PUBLIC_KRISHNA_RONALDO);
       console.log('Template ID:', process.env.NEXT_PUBLIC_LEO_MERCY);
       console.log('Public Key:', process.env.NEXT_PUBLIC_DEOGO_JOTA);
-      
+
       // Send email using EmailJS
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_KRISHNA_RONALDO || '',
@@ -63,7 +63,7 @@ export default function ContactPage() {
         formRef.current as HTMLFormElement,
         process.env.NEXT_PUBLIC_DEOGO_JOTA || ''
       );
-      
+
       // Clear the form
       setFormData({
         firstName: "",
@@ -72,10 +72,10 @@ export default function ContactPage() {
         company: "",
         message: ""
       })
-      
+
       // Show success popup
       setShowSuccess(true)
-      
+
       // Auto-hide popup after 3 seconds
       setTimeout(() => {
         setShowSuccess(false)
@@ -122,21 +122,21 @@ export default function ContactPage() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                      <Input 
+                      <Input
                         name="firstName"
                         value={formData.firstName}
                         onChange={handleInputChange}
-                        placeholder="John" 
+                        placeholder="John"
                         required
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                      <Input 
+                      <Input
                         name="lastName"
                         value={formData.lastName}
                         onChange={handleInputChange}
-                        placeholder="Doe" 
+                        placeholder="Doe"
                         required
                       />
                     </div>
@@ -144,41 +144,41 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                    <Input 
-                      type="email" 
+                    <Input
+                      type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      placeholder="john@example.com" 
+                      placeholder="john@example.com"
                       required
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Company</label>
-                    <Input 
+                    <Input
                       name="company"
                       value={formData.company}
                       onChange={handleInputChange}
-                      placeholder="Your Company Name" 
+                      placeholder="Your Company Name"
                       required
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
-                    <Textarea 
+                    <Textarea
                       name="message"
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Tell us about your farming needs and how we can help..." 
-                      rows={5} 
+                      placeholder="Tell us about your farming needs and how we can help..."
+                      rows={5}
                       required
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
+                  <Button
+                    type="submit"
                     className="w-full bg-blue-600 hover:bg-blue-700"
                     disabled={loading}
                   >
@@ -242,7 +242,7 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              
+
             </div>
           </div>
         </div>
@@ -252,7 +252,7 @@ export default function ContactPage() {
       {showSuccess && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white rounded-lg p-8 max-w-md mx-4 text-center relative">
-            <button 
+            <button
               onClick={closeSuccessPopup}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
             >
@@ -289,7 +289,7 @@ export default function ContactPage() {
             <div className="text-center mt-6">
               <p className="text-gray-600 text-lg font-medium">Vandyam Solutions Pvt Ltd</p>
               <p className="text-gray-600">Belagavi, Karnataka, India</p>
-              <a 
+              <a
                 href="https://www.google.com/maps/search/Vandyam+Solutions+Belagavi+Karnataka"
                 target="_blank"
                 rel="noopener noreferrer"

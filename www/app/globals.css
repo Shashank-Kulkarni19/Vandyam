@@ -190,3 +190,17 @@ html {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
 }
+
+/* Infinite Scroll Animation */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(var(--scroll-distance, -100%));
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll var(--scroll-duration, 20s) linear infinite;
+}

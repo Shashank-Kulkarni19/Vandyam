@@ -40,7 +40,7 @@ export default function ViOTNodePage() {
                                 <span>Advanced IoT Sensing</span>
                             </div>
                             <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight leading-tight">
-                                VIoT <span className="text-blue-600">Node</span>
+                                4-20mA Node
                             </h1>
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
                                 Water Quality Sensor

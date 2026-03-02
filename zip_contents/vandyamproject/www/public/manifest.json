@@ -1,0 +1,27 @@
+{
+  "name": "Vandyam - Real Solutions. True IoT. No Compromises.",
+  "short_name": "Vandyam",
+  "description": "Vandyam specializes in AIoT solutions, integrating Artificial Intelligence into IoT and embedded hardware systems.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3b82f6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/home/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/home/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en",
+  "dir": "ltr"
+}

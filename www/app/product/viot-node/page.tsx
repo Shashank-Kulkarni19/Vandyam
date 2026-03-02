@@ -37,7 +37,7 @@ export default function ViotNodeEnterprisePage() {
                         <div className="lg:w-1/2 space-y-8">
                             <div className="space-y-4">
                                 <h1 className="text-6xl md:text-7xl font-bold tracking-tight text-[#0A2540] leading-[1.1]">
-                                    VIoT Node
+                                    4-20mA Node
                                 </h1>
                                 <p className="text-2xl md:text-3xl font-medium text-[#2E7DFF]">
                                     Intelligent Industrial Monitoring Platform
@@ -48,16 +48,7 @@ export default function ViotNodeEnterprisePage() {
                                 </p>
                             </div>
 
-                            <div className="flex flex-wrap gap-4">
-                                <Button className="bg-[#2E7DFF] hover:bg-[#1a6eff] text-white px-8 py-6 rounded-xl text-lg font-semibold transition-all flex items-center gap-2">
-                                    <Download size={20} />
-                                    Download Datasheet
-                                </Button>
-                                <Button variant="outline" className="border-2 border-[#0A2540]/10 text-[#0A2540] hover:bg-[#0A2540]/5 px-8 py-6 rounded-xl text-lg font-semibold transition-all flex items-center gap-2">
-                                    <Mail size={20} />
-                                    Contact Sales
-                                </Button>
-                            </div>
+
                         </div>
 
                         <div className="lg:w-1/2 flex justify-center">

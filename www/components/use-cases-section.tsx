@@ -51,12 +51,12 @@ export function UseCasesSection() {
                 </p>
             </div>
 
-            <div className="flex flex-col md:flex-row h-[600px] w-full max-w-[1400px] mx-auto px-4 gap-2">
+            <div className="flex flex-col md:flex-row min-h-[700px] lg:h-[75vh] w-full max-w-[1600px] mx-auto px-4 gap-3">
                 {useCases.map((useCase, index) => (
                     <Link
                         key={index}
                         href={useCase.href}
-                        className="relative flex-1 group overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] hover:flex-[2] rounded-2xl first:rounded-l-3xl last:rounded-r-3xl"
+                        className="relative flex-1 group overflow-hidden cursor-pointer transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)] md:hover:flex-[2.5] rounded-2xl first:rounded-l-3xl last:rounded-r-3xl"
                     >
                         {/* Background Image */}
                         <Image
